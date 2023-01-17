@@ -26,7 +26,8 @@ public class IsPrime {
             System.out.println("The number n=" + n + " is not prime.");
         }
     }
-    // Instead of looking for all possible factors lesser than n; we iterate only till root N as numbers greater than root N cant be factors.
+    // Instead of looking for all possible factors lesser than n; we iterate only till root N as numbers greater than root N
+    // which are factors would have already been considered with those which are less than root N.
     // TC = O(root N)
     // SC = O(1)
 }
