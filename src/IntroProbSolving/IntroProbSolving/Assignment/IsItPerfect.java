@@ -1,4 +1,4 @@
-package IntroProbSolving.IntroProbSolving.Lecture;
+package IntroProbSolving.IntroProbSolving.Assignment;
 
 import java.util.Scanner;
 
