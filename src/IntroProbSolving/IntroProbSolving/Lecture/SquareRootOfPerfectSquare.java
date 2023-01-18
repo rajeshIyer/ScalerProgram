@@ -33,7 +33,8 @@ public class SquareRootOfPerfectSquare {
         int squareRoot = squareRootOfPerfectSquare.findSquareRootOfPerfectSquare(n);
         System.out.println("The square root of the perfect square number N=" + n  + " is squareRoot=" + squareRoot + ".");
 
-        // Instead of iterating all possible numbers less than n to find square root; reduce the search space by logN base2
+        // Instead of iterating all possible numbers less than n to find square root;
+        // reduce the search space by logN base2 using binary search concept
         // TC = O(logN)2
         // SC = O(1)
     }
