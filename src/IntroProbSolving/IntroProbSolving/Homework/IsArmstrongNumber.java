@@ -11,8 +11,8 @@ public class IsArmstrongNumber {
             sum+=(i%10)*(i%10)*(i%10);
             i=i/10;
         }
-        // Adding cube if the most significant digit outside the loop
-        sum+=(i)*(i)*(i);
+        // Adding cube of the most significant digit outside the loop
+        sum+= (long) (i) *(i)*(i);
         return sum == n;
     }
 
