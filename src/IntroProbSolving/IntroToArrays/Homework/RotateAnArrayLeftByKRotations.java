@@ -1,12 +1,14 @@
-package IntroProbSolving.IntroToArrays.Lecture;
+package IntroProbSolving.IntroToArrays.Homework;
+
+import IntroProbSolving.IntroToArrays.Lecture.ReverseAnArray;
 
 import java.util.Scanner;
 
-public class RotateAnArrayByKRotations {
+public class RotateAnArrayLeftByKRotations {
     private int[] rotateByK(int[] input, int k) {
         ReverseAnArray reverseAnArray = new ReverseAnArray();
         input = reverseAnArray.reverseAnArray(input,0,input.length-1);
-        input = reverseAnArray.reverseAnArray(input,0, k);
+        input = reverseAnArray.reverseAnArray(input,0,k);
         input = reverseAnArray.reverseAnArray(input,k+1,input.length-1);
         return input;
     }
@@ -27,7 +29,7 @@ public class RotateAnArrayByKRotations {
         if(k>n) {
             k=k%n;
         }
-        RotateAnArrayByKRotations kRotations = new RotateAnArrayByKRotations();
+        RotateAnArrayLeftByKRotations kRotations = new RotateAnArrayLeftByKRotations();
         input = kRotations.rotateByK(input, k);
         for(int j: input){
             System.out.print(j+ " ");
