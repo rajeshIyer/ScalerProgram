@@ -37,8 +37,8 @@ public class RotateAnArrayLeftByKRotations {
     }
     // Steps followed:
     // 1. Reverse the whole array to get {5,4,3,2,1}
-    // 2. Reverse elements in the range 0 to k of the reversed array to get {3,4,5,2,1}
-    // 3. Reverse elements in the range (k+1) to (n-1) of the reversed array to get {3,4,5,1,2}
+    // 2. Reverse elements in the range 0 to (n-k-1) of the reversed array to get {3,4,5,2,1}
+    // 3. Reverse elements in the range (n-k) to (n-1) of the reversed array to get {3,4,5,1,2}
     // TC = O(N)
     // SC = O(N)
 }
