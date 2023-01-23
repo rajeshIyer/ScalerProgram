@@ -8,8 +8,8 @@ public class RotateAnArrayLeftByKRotations {
     private int[] rotateByK(int[] input, int k) {
         ReverseAnArray reverseAnArray = new ReverseAnArray();
         input = reverseAnArray.reverseAnArray(input,0,input.length-1);
-        input = reverseAnArray.reverseAnArray(input,0,k);
-        input = reverseAnArray.reverseAnArray(input,k+1,input.length-1);
+        input = reverseAnArray.reverseAnArray(input,0,input.length-k-1);
+        input = reverseAnArray.reverseAnArray(input,input.length-k,input.length-1);
         return input;
     }
 
