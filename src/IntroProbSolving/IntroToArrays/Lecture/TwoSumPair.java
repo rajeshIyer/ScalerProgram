@@ -35,7 +35,7 @@ public class TwoSumPair {
         } else {
             System.out.println(" No pair exists that adds up to K");
         }
-        // Iterate using 2 loops for combinations of i!=j such that i is less than j; as the other possibility of i grater than j would already be considered.
+        // Iterate using 2 loops for combinations of i!=j such that i is less than j; as the other possibility of i greater than j would already be considered.
         // TC = O(N^2)
         // SC= O(1)
 
