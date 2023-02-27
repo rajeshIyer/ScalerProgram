@@ -3,7 +3,7 @@ package IntroProbSolving.ArraysPrefixSum.Lecture;
 import java.util.Scanner;
 
 public class PrefixSumArray {
-    private int[] generatePrefixSumArray(int[] input) {
+    public int[] generatePrefixSumArray(int[] input) {
         int[] prefixSumArray = new int[input.length];
         prefixSumArray[0] = input[0];
         // Iterate with start index as 1
@@ -29,4 +29,6 @@ public class PrefixSumArray {
             System.out.print(prefixSumArray[i] + " ");
         }
     }
+    // TC = O(N)
+    // SC = O(N)        O(N) for prefix sum array
 }

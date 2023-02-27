@@ -3,7 +3,6 @@ package IntroProbSolving.IntroProbSolving.Lecture;
 import java.util.Scanner;
 
 public class DivideByTwoToReachOne {
-
     public int fetchCountOfDivisionsByTwoToReachOne(int n){
         int count = 0;
         while(n!=1) {
