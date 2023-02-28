@@ -4,29 +4,25 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 public class EvenOddPrefixSumArrayInGivenRange {
-    private Map<String,int[]> fetchEvenOddPrefixSumArrayInGivenRange(int[] input) {
+    public Map<String,int[]> fetchEvenOddPrefixSumArrayInGivenRange(int[] input) {
         Map<String,int[]> arrayMap = new HashMap<>();
         int size = input.length;
-        int resultEvenArrayLength = 0;
-        int resultOddArrayLength = size/2;
-        if(size%2 == 1) {
-                resultEvenArrayLength=size/2+1;
-        } else {
-                resultEvenArrayLength=size/2;
-        }
-        int[] prefixSumEvenArray = new int[resultEvenArrayLength];
-        int[] prefixSumOddArray = new int[resultOddArrayLength];
-        int j=1;
-        int k=1;
+        int[] prefixSumEvenArray = new int[input.length];
+        int[] prefixSumOddArray = new int[input.length];
+
+        // The first element of the even prefix sum array is the same as the first element of input array
         prefixSumEvenArray[0] = input[0];
-        prefixSumOddArray[0] = input[1];
-        for(int i=2; i<size; i++){
+        // Initialize the first element of odd prefix sum array as 0
+        prefixSumOddArray[0] = 0;
+        for(int i=1; i<size; i++){
             if(i%2==0) {
-                prefixSumEvenArray[j] = prefixSumEvenArray[j-1] + input[i];
-                j++;
+                prefixSumEvenArray[i] = prefixSumEvenArray[i-1] + input[i];
+                // For even indices, retain the odd array element value to be same as previous element
+                prefixSumOddArray[i] = prefixSumOddArray[i-1];
             } else {
-                prefixSumOddArray[k] = prefixSumOddArray[k-1] + input[i];
-                k++;
+                prefixSumOddArray[i] = prefixSumOddArray[i-1] + input[i];
+                // For odd indices, retain the even array element value to be same as previous element
+                prefixSumEvenArray[i] = prefixSumEvenArray[i-1];
             }
         }
         arrayMap.put("E", prefixSumEvenArray);
