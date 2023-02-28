@@ -19,6 +19,8 @@ public class EquilibriumIndex {
     }
 
     // Equilibrium index - An index such that the sum of elements to its left is same as the sum of elements to its right.
+    // When there are no elements to the left, assume left sum to be 0
+    // When there are no elements to the right, assume right sum to be 0
     public static void main(String[] args) {
         System.out.println("Enter the size of array n followed by elements of the array: ");
         Scanner scanner = new Scanner(System.in);
@@ -35,7 +37,7 @@ public class EquilibriumIndex {
         for (int i = 0; i < n; i++) {
             System.out.print(prefixSumArray[i] + " ");
         }
-        System.out.println("");
+        System.out.println();
         EquilibriumIndex eqIndex = new EquilibriumIndex();
         int result = eqIndex.fetchEquilibriumIndex(prefixSumArray);
         if(result == -1){

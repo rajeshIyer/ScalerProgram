@@ -12,6 +12,16 @@ public class PrefixSumArray {
         }
         return prefixSumArray;
     }
+    public int[] generatePrefixSumArrayInRange(int[] input, int startIndex, int endIndex) {
+        int[] prefixSumArray = new int[endIndex - startIndex + 1];
+        prefixSumArray[startIndex] = input[startIndex];
+        // Iterate with start index as startIndex+1
+        for(int i=startIndex+1; i<=endIndex; i++){
+            prefixSumArray[i] = prefixSumArray[i-1] + input[i];
+        }
+        return prefixSumArray;
+    }
+
     public static void main(String[] args) {
         System.out.println("Enter the size of array n followed by elements of the array: ");
         Scanner scanner = new Scanner(System.in);
